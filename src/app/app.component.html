@@ -1,0 +1,15 @@
+
+
+<div class="wrapper">
+  <h1>Foofle</h1>
+  <div class="search" (click)="changeClass()">
+      <input #userInput type="text" class="input-text" autofocus="on" placeholder="Search country">
+      <div class="btn delete" (click)="userInput.value=''">&#x2716;</div>
+      <div (click)="search()" class="btn find"></div>
+  </div>
+  <div class="phrases">
+      <div #country class="phrase" *ngFor="let item of countryList" (click)="userInput.value = country.innerHTML">{{item.name}}</div>
+  </div>
+</div>
+
+
